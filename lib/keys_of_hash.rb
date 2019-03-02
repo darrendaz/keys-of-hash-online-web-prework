@@ -5,11 +5,6 @@ require "pry"
 class Hash
   def keys_of(arguments)
     arguments = *arguments
-    keys[values.index("Panama")]
-    binding.pry
-      
-    end
-    
     
   end
 end

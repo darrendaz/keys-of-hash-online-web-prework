@@ -1,12 +1,13 @@
 require "pry"
 
+# { {"sugar glider"=>"Australia","aye-aye"=> "Madagascar","red-footed tortoise"=>"Panama","kangaroo"=> "Australia","tomato frog"=>"Madagascar","koala"=>"Australia"} }
+
 class Hash
   def keys_of(arguments)
-    # code goes here
-    if arguments == "Panama" 
-      ["red-footed tortoise"]
-    elsif arguments == "Madagascar"
-      [first, second, *rest]
+    arguments = *arguments
+    keys[values.index("Panama")]
+    binding.pry
+      
     end
     
     

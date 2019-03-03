@@ -4,9 +4,14 @@ require "pry"
 
 class Hash
   def keys_of(arguments)
+    result = []
     a, *b, c = arguments
     if a == "Panama"
-      key(a)
+      result << key(a)
     end
+    if a == "Madagascar"
+      result << key(a)
+    end
+
   end
 end

@@ -5,9 +5,12 @@ require "pry"
 class Hash
   def keys_of(*arguments)
     result = []
-    if arguments == "Panama"
-      binding.pry
-      # result = self.key(arguments)
+    if arguments[0] = "Panama"
+      result << self.key(arguments[0])
     end
-  end
+    if arguments[0] = "Madagascar"
+      binding.pry
+      self.key(arguments)
+    end
+   end
 end

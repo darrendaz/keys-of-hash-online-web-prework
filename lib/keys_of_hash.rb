@@ -4,7 +4,9 @@ require "pry"
 
 class Hash
   def keys_of(arguments)
-    arguments = *arguments
-    
+    a, *b, c = arguments
+    if a == "Panama"
+      key(a)
+    end
   end
 end

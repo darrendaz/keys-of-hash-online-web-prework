@@ -7,7 +7,7 @@ class Hash
     result = []
     if arguments == "Panama"
       binding.pry
-      result = self.key(arguments)
+      # result = self.key(arguments)
     end
   end
 end

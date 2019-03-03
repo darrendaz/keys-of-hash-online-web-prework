@@ -8,10 +8,11 @@ class Hash
     a, *b, c = arguments
     if a == "Panama"
       result << key(a)
-    end
-    if a == "Madagascar"
+    elsif a == "Madagascar"
+    binding.pry
       result << key(a)
     end
+    result
 
   end
 end

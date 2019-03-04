@@ -10,7 +10,7 @@ class Hash
       if arguments.join(", ") == value
         key
       end
-      if key
+      if key.is_a?("String")
         binding.pry
       end
     }.compact

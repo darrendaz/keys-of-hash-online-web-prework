@@ -4,14 +4,12 @@ require "pry"
 
 class Hash
   def keys_of(*arguments)
-    result = []
-    if arguments[0] = "Panama"
-      result << self.key(arguments[0])
-    end
-    if arguments = "Madagascar"
-      self.collect { |k, v|
+    self.collect { |key, value|
+      if arguments.join(", ") == value
         binding.pry
-      }
-    end
-   end
+        key
+      end
+    }.compact
+    
+  end
 end

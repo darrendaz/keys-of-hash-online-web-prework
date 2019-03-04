@@ -8,10 +8,10 @@ class Hash
   def keys_of(*arguments)
     self.collect { |key, value|
       if arguments.join(", ") == value
-        binding.pry
         key
       end
       if arguments
+        binding.pry
       end
     }.compact
     

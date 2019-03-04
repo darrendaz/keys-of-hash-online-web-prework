@@ -2,16 +2,21 @@ require "pry"
 
 # { {"sugar glider"=>"Australia","aye-aye"=> "Madagascar","red-footed tortoise"=>"Panama","kangaroo"=> "Australia","tomato frog"=>"Madagascar","koala"=>"Australia"} }
 
+# {a: 1, b: 2, c: 3}
+
 class Hash
   def keys_of(*arguments)
-    result = []
-    if arguments[0] = "Panama"
-      result << self.key(arguments[0])
-    end
-    if arguments = "Madagascar"
-      self.collect { |k, v|
+    self.collect { |key, value|
+      if arguments.join(", ") == value
+        key
         binding.pry
-      }
-    end
-   end
+      end
+      binding.pry
+      if self.values.include?(*arguments)
+        key(*arguments)
+      end
+
+    }.compact
+    
+  end
 end

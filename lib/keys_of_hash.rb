@@ -12,6 +12,7 @@ class Hash
       end
       if key.is_a? Symbol
         binding.pry
+        key
       end
     }.compact
     

@@ -7,16 +7,9 @@ require "pry"
 class Hash
   def keys_of(*arguments)
     self.collect { |key, value|
-      if arguments.join(", ") == value
+      if arguments.include?(value)
         key
-        binding.pry
       end
-      binding.pry
-      if self.values.include?(*arguments)
-        key(*arguments)
-      end
-
     }.compact
-    
   end
 end

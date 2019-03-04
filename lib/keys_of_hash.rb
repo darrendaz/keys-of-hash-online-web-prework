@@ -8,9 +8,10 @@ class Hash
     if arguments[0] = "Panama"
       result << self.key(arguments[0])
     end
-    if arguments[0] = "Madagascar"
-      binding.pry
-      self.key(arguments)
+    if arguments = "Madagascar"
+      self.collect { |k, v|
+        binding.pry
+      }
     end
    end
 end
